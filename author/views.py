@@ -1,6 +1,8 @@
 from django.shortcuts import HttpResponse, redirect
 from .models import Author
 
+# alaki
+
 def author_home(request):
     all_authors = Author.objects.all()
 
