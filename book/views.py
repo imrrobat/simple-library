@@ -23,3 +23,12 @@ def remove_book(request, id):
     return redirect('home')
 
 # update book 
+def update_book(request, id, new_name):
+    selected_book = Book.objects.get(id=id)
+    selected_book.title = new_name 
+    selected_book.save()
+    
+    # Book.objects.filter(id=id).update(name=new_name)
+
+    return redirect('home')
+    
